@@ -57,6 +57,7 @@ inquirer
         }
 
     ])
+    // Checks response for license value, and attaches correct badge to created badge object
     .then((response) => {
         let badge = '';
         if (response.license === 'MIT') {
@@ -68,7 +69,7 @@ inquirer
         } else if (response.license === 'The Unlicense') {
             badge = '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)'
         }
-
+// gives structure to the result, because we need a text structure to put the answers to the inquirer prompt into
         const layout = `
 # ${response.title}
 
@@ -120,18 +121,10 @@ ${response.credits}
 ## License
         
 The repo is covered under the standard ${response.license} license. See LICENSE in repo for more info.`
-
-        writeToFile(`./result/README.md`, layout);
+// Puts the layout output with added inquirer content into the result folder
+        writeToFile(`./assets/result/README.md`, layout);
     });
 
-
-// TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => err ? console.error(err) : console.log('README ready, located in results folder'))
 }
-
-// TODO: Create a function to initialize app
-// function init() {}
-
-// Function call to initialize app
-// init();
