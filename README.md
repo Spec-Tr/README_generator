@@ -13,7 +13,7 @@ https://spec-tr.github.io/README_generator/
 ## Usage
 
 1. Clone Repo
-2. Open CLI (Command-Line Interface) the directory /root
+2. Open CLI (Command-Line Interface) at the directory /root folder
 3. Install Node.js packages with command "npm i"
 4. Run script with command "node index.js"
 5. Answer questions to generate README
