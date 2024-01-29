@@ -69,7 +69,7 @@ inquirer
         } else if (response.license === 'The Unlicense') {
             badge = '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)'
         }
-// gives structure to the result, because we need a text structure to put the answers to the inquirer prompt into
+// Gives structure to the result, because we need a text structure to put the answers to the inquirer prompt into
         const layout = `
 # ${response.title}
 
